@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /404.html
+Disallow: /500.html
+Disallow: /503.html
+
+Sitemap: https://cutprompt.vercel.app/sitemap.xml

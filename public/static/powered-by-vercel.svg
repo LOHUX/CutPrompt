@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="166" height="32" viewBox="0 0 166 32" role="img" aria-label="Powered by Vercel">
+  <rect x="0.5" y="0.5" width="165" height="31" rx="6" fill="#101820" stroke="#596575"/>
+  <path d="M14 22L22 8l8 14H14z" fill="#fff"/>
+  <text x="39" y="20" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="12.5">Powered by <tspan font-weight="700">Vercel</tspan></text>
+</svg>

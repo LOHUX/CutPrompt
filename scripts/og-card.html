@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+* { box-sizing: border-box; }
+html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: #f3faf9;
+  background: radial-gradient(ellipse 600px 440px at 110% 15%, #175968 0%, transparent 78%),
+    radial-gradient(ellipse 500px 360px at 0% 125%, #134751 0%, transparent 70%), #071b23;
+}
+body::before { content: ""; position: absolute; inset: 0; border: 2px solid #2c7982; opacity: .45; }
+.accent { position: absolute; width: 8px; height: 280px; top: 182px; left: 67px; border-radius: 10px; background: linear-gradient(#38d5b4, #1c6579); }
+.brand { position: absolute; top: 84px; left: 104px; display: flex; align-items: center; gap: 17px; }
+.brand img { width: 60px; height: 60px; object-fit: contain; }
+.brand span { font-size: 26px; letter-spacing: 2px; font-weight: 800; color: #71e3c9; }
+h1 { position: absolute; top: 205px; left: 105px; margin: 0; font-size: 78px; font-weight: 800; letter-spacing: -3px; line-height: 1.05; }
+.tagline { position: absolute; top: 315px; left: 108px; max-width: 600px; font-size: 30px; line-height: 1.3; font-weight: 500; color: #e0e9ed; }
+.features { position: absolute; top: 433px; left: 108px; font-size: 19px; color: #70d7c5; letter-spacing: .2px; }
+.by { position: absolute; top: 555px; left: 110px; font-size: 20px; font-weight: 700; letter-spacing: 1.7px; color: #dae5e6; }
+.art { position: absolute; top: 185px; right: 74px; width: 275px; transform: rotate(-9deg); }
+.card { border-radius: 16px; padding: 21px 23px; margin: 12px; background: #13323d; border: 1px solid #357684; box-shadow: 0 16px 48px #0005; }
+.card::before { content: ""; display: block; width: 175px; height: 9px; border-radius: 10px; background: #4f9b9d; margin-bottom: 13px; }
+.card::after { content: ""; display: block; width: 120px; height: 9px; border-radius: 10px; background: #27616c; }
+.card.first { opacity: .64; }
+.card.second { margin-left: 43px; border-color: #52bfa9; }
+.card.third { margin-left: 20px; opacity: .86; }
+.split { margin: 0 24px; display: flex; align-items: center; gap: 10px; color: #72e1cb; font-size: 17px; font-weight: 800; }
+.split::before,.split::after { content: ""; height: 2px; background: #449c9b; flex: 1; }
+</style>
+</head>
+<body>
+<div class="accent"></div>
+<div class="brand"><img src="../public/cutprompt-logo.png" alt=""><span>AI PROMPT TOOL</span></div>
+<h1>CutPrompts</h1>
+<div class="tagline">Split Long AI Prompts<br>Effortlessly.</div>
+<div class="features">Smart Splitting · AI Presets · Batch Processing</div>
+<div class="by">BY LOHUX</div>
+<div class="art"><div class="card first"></div><div class="split">✂ SPLIT</div><div class="card second"></div><div class="card third"></div></div>
+</body>
+</html>

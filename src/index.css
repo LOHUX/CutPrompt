@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* Shared sizing and interaction rules for compact, accessible action controls. */
+@layer components {
+  .cp-button {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg px-3 text-sm font-medium leading-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .cp-button-primary {
+    @apply min-h-10 px-4;
+  }
+
+  .cp-nav-button {
+    @apply flex min-h-11 w-full min-w-0 items-center justify-center gap-2 rounded-lg px-2 text-sm font-medium leading-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 sm:min-h-10;
+  }
+
+  .cp-icon-button {
+    @apply inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 sm:h-9 sm:w-9;
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes bounceSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Custom Range Slider Styles */
+input[type="range"].slider {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"].slider:focus {
+  outline: none;
+}
+
+input[type="range"].slider:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2), 0 2px 6px rgba(37, 99, 235, 0.3), 0 0 0 2px white;
+}
+
+/* Webkit/Chrome/Safari */
+input[type="range"].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(37 99 235);
+  cursor: grab;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3), 0 0 0 2px white;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  margin-top: -6px;
+  position: relative;
+  z-index: 3;
+}
+
+input[type="range"].slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+input[type="range"].slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.5), 0 0 0 2px white;
+  background: rgb(29 78 216);
+}
+
+input[type="range"].slider::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.6), 0 0 0 2px white;
+  background: rgb(29 78 216);
+}
+
+/* Firefox */
+input[type="range"].slider::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(37 99 235);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  transition: all 0.15s ease-out;
+  position: relative;
+  z-index: 3;
+}
+
+input[type="range"].slider::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.5);
+  background: rgb(29 78 216);
+}
+
+input[type="range"].slider::-moz-range-thumb:active {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.6);
+  background: rgb(29 78 216);
+}
+
+input[type="range"].slider:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2), 0 2px 6px rgba(37, 99, 235, 0.3);
+}
